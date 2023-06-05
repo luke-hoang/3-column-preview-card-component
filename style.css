@@ -31,12 +31,12 @@ body {
   font-family: 'Lexend Deca', sans-serif;
   color: var(--very-light-gray);
   padding: 48px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
-.card h2 {
+.card header h2 {
   font-family: 'Big Shoulders Display', cursive;
   font-size: 40px;
   text-transform: uppercase;
@@ -48,40 +48,46 @@ body {
   line-height: 25px;
 }
 
-.card a {
-  background-color: var(--very-light-gray);
-  text-decoration: none;
-  padding: 15px 30px;
-  border-radius: 30px;
+.card footer {
+  position: absolute;
+  bottom: 48px;
 }
 
-.card a:hover {
+.card footer a {
+  display: inline-block;
+  background-color: var(--very-light-gray);
+  text-decoration: inherit;
+  padding: 14px 28px;
+  border-radius: 28px;
+}
+
+.card footer a:hover {
   background-color: transparent;
   color: var(--very-light-gray);
   border: 2px solid var(--very-light-gray);
 }
 
-.card:nth-child(1) {
+.sedans {
   background-color: var(--bright-orange);
 }
 
-.card:nth-child(1) a {
-  color: var(--bright-orange);
-}
-
-.card:nth-child(2) {
+.suvs {
   background-color: var(--dark-cyan);
 }
 
-.card:nth-child(2) a {
-  color: var(--dark-cyan);
-}
-
-.card:nth-child(3) {
+.luxury {
   background-color: var(--very-dark-cyan);
 }
 
-.card:nth-child(3) a {
+.sedans footer a {
+  color: var(--bright-orange);
+}
+
+.suvs footer a {
+  color: var(--dark-cyan);
+}
+
+.luxury footer a {
   color: var(--very-dark-cyan);
 }
 
